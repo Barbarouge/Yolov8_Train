@@ -1,11 +1,11 @@
-# 🐄 Cow Skeleton Pose Estimation with YOLOv8
+# Cow Skeleton Pose Estimation with YOLOv8
 
 Pose estimation model to detect cow skeletons in video frames using [YOLOv8-Pose](https://docs.ultralytics.com/tasks/pose/).  
 Annotations were created with [CVAT](https://github.com/opencv/cvat) on 550 frames of a cow walking video.
 
 ---
 
-## 📌 Project Overview
+## Project Overview
 
 - **Dataset**: 550-frame video annotated with cow skeleton keypoints
 - **Annotation Tool**: CVAT
@@ -15,23 +15,8 @@ Annotations were created with [CVAT](https://github.com/opencv/cvat) on 550 fram
 
 ---
 
-## 📁 Directory Structure
 
-\`\`\`
-├── data/
-│   ├── images/
-│   └── labels/
-├── train_cli/
-│   ├── results.png
-│   ├── val_batch0_pred.jpeg
-│   └── ...
-├── config.yaml
-├── README.md
-\`\`\`
-
----
-
-## 🏁 Training
+## Training
 
 Training was performed using the following command:
 
@@ -41,15 +26,15 @@ yolo pose train model=yolov8n-pose.pt data=config.yaml epochs=50 imgsz=640 devic
 
 ---
 
-## 📈 Results
+## Results
 
-### 📊 Training Metrics
+### Training Metrics
 
 <p align="center">
   <img src="train_cli/results.png" alt="Training Metrics" width="100%"/>
 </p>
 
-### 🐄 Validation Predictions
+### Validation Predictions
 
 <p align="center">
   <img src="train_cli/val_batch0_pred.jpeg" alt="val_batch0_pred" width="70%"/>
@@ -57,7 +42,7 @@ yolo pose train model=yolov8n-pose.pt data=config.yaml epochs=50 imgsz=640 devic
 
 ---
 
-## 🧪 Examples from Training
+## Examples from Training
 
 <p align="center">
   <img src="train_cli/train_batch0.jpeg" width="30%"/>
@@ -73,7 +58,7 @@ yolo pose train model=yolov8n-pose.pt data=config.yaml epochs=50 imgsz=640 devic
 
 ---
 
-## 🔍 Inference
+## Inference
 
 Run inference on a new video:
 
@@ -89,7 +74,7 @@ yolo pose predict model=train_cli/weights/best.pt source=0
 
 ---
 
-## 📖 Acknowledgements
+## Acknowledgements
 
 - [Ultralytics YOLOv8](https://github.com/ultralytics/ultralytics)
 - [CVAT Annotation Tool](https://github.com/opencv/cvat)
